@@ -30,7 +30,7 @@ class App extends React.Component {
                 {/* TODO: if the user is logged in, render the `MyFavoriteBooks` component, if they are not, render the `Login` component */}
               {isAuthenticated ? <LogoutButton /> : <Login />}
               {isAuthenticated ? user.name : ''}
-              {isAuthenticated ? <img src={user.picture} /> : ''}
+              {isAuthenticated ? <img src={user.picture} alt={user.picture} /> : ''}
               </Route>
 
               <Route 
