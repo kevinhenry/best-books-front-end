@@ -10,7 +10,7 @@ This application enables people to login to their profile and save their favorit
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
-# Installation
+### Installation
 
 Install Dependencies
 `npm install`
