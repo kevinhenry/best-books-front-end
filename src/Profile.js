@@ -15,7 +15,7 @@ const Profile = () => {
       <div>
         <Container>
           <Card style={{ width: '15rem' }}>
-            <Card.Img variant="top" style={{ width: '15rem' }} src={user.picture} />
+            <Card.Img variant="top" style={{ width: '15rem' }} src={user.picture} alt={user.name} />
             <Card.Body>
               <Card.Title>{user.name}'s Profile</Card.Title>
               <Card.Text>
