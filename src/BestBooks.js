@@ -16,8 +16,8 @@ class BestBooks extends React.Component {
 
   componentDidMount = async() => {
     const {user} = this.props.auth0;
-      console.log('about to request book data');
-      const bookData = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/book?user=${user.userEmail}`
+      console.log('user', user);
+      const bookData = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/book?user=${user.email}`
       )
       console.log('found it', bookData)
       this.setState({
@@ -28,7 +28,7 @@ class BestBooks extends React.Component {
     
     return(
       <>
-        <h1>Books</h1>
+        <h1>Books BestBooks works</h1>
         {this.state.books && this.state.books.map(book => <h3 key={book._id}>{book.bookName}</h3>)}
       </>
     )

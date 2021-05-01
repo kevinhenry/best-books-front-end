@@ -45,7 +45,6 @@ class App extends React.Component {
               {isAuthenticated ? user.name : ''}
               {isAuthenticated ? <img src={user.picture} alt={user.picture} /> : ''}
               {isAuthenticated ? <MyFavoriteBooks /> : ''}
-              <BestBooks />
               </Route>
 
               <Route 
