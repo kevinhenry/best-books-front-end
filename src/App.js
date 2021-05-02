@@ -1,5 +1,4 @@
 import React from 'react';
-import BestBooks from './BestBooks';
 import Footer from './Footer';
 import Header from './Header';
 import IsLoadingAndError from './IsLoadingAndError';
