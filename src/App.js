@@ -1,10 +1,12 @@
 import React from 'react';
-import BestBooks from './BestBooks';
+// import BestBooks from './BestBooks';
+// import axios from 'axios';
 import Footer from './Footer';
 import Header from './Header';
 import IsLoadingAndError from './IsLoadingAndError';
 import Login from './Login';
 import LogoutButton from './LogoutButton';
+import BookForm from './BookForm';
 import MyFavoriteBooks from './MyFavoriteBooks';
 import Profile from './Profile';
 import './App.css'
@@ -37,14 +39,17 @@ class App extends React.Component {
       <>
         <Router>
           <IsLoadingAndError>
-            <Header />
+            <Header >
+              {isAuthenticated ? <LogoutButton /> : <Login />}
+            </Header>
+            
             <Switch>
               <Route exact path="/">
                 {/* DONE: if the user is logged in, render the `MyFavoriteBooks` component, if they are not, render the `Login` component */}
-              {isAuthenticated ? <LogoutButton /> : <Login />}
               {isAuthenticated ? user.name : ''}
               {isAuthenticated ? <img src={user.picture} alt={user.picture} /> : ''}
               {isAuthenticated ? <MyFavoriteBooks /> : ''}
+              {isAuthenticated ? <BookForm /> : ''}
               </Route>
 
               <Route 
