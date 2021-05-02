@@ -58,6 +58,42 @@ Actual time needed to complete: _3.5 hours____
 
 --
 
+Name of feature: __Set up back-end Repository______________________________
+
+Estimate of time needed to complete: __2___
+
+Start time: _7 pm____
+
+Finish time: _9:30 pm____
+
+Actual time needed to complete: _2.5 hours____
+
+--
+
+Name of feature: __Storage______________________________
+
+Estimate of time needed to complete: __2___
+
+Start time: _11 am____
+
+Finish time: _3 pm____
+
+Actual time needed to complete: _4 hours____
+
+--
+
+Name of feature: __Book Component______________________________
+
+Estimate of time needed to complete: __2___
+
+Start time: _3 pm____
+
+Finish time: _8:30 pm____
+
+Actual time needed to complete: _5.5 hours____
+
+--
+
 Name of feature: ________________________________
 
 Estimate of time needed to complete: _____
@@ -80,9 +116,24 @@ Finish time: _____
 
 Actual time needed to complete: _____
 
+--
+
+Name of feature: ________________________________
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 We leaned heavily on the starter code provided, as well as the great documentation on Auth0's webpage.
+
+Alex, Kassie, Lorenzo, Mo, Aloicious
 
 --
 
