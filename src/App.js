@@ -1,10 +1,10 @@
 import React from 'react';
-import BestBooks from './BestBooks';
 import Footer from './Footer';
 import Header from './Header';
 import IsLoadingAndError from './IsLoadingAndError';
 import Login from './Login';
 import LogoutButton from './LogoutButton';
+import BookForm from './BookForm';
 import MyFavoriteBooks from './MyFavoriteBooks';
 import Profile from './Profile';
 import './App.css'
@@ -17,15 +17,14 @@ import { withAuth0 } from '@auth0/auth0-react';
 
 class App extends React.Component {
 
-  constructor(props) {
-    super(props);
-
-    this.state ={
-      userName: '',
-      favoriteBooks: [],
-      userEmail: '',
-    }
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state ={
+  //     name: '',
+  //     books: [],
+  //     email: '',
+  //   }
+  // }
 
   render() {
     console.log('app', this.props);
@@ -37,14 +36,17 @@ class App extends React.Component {
       <>
         <Router>
           <IsLoadingAndError>
-            <Header />
+            <Header >
+              {isAuthenticated ? <LogoutButton /> : <Login />}
+            </Header>
+            
             <Switch>
               <Route exact path="/">
                 {/* DONE: if the user is logged in, render the `MyFavoriteBooks` component, if they are not, render the `Login` component */}
-              {isAuthenticated ? <LogoutButton /> : <Login />}
               {isAuthenticated ? user.name : ''}
               {isAuthenticated ? <img src={user.picture} alt={user.picture} /> : ''}
               {isAuthenticated ? <MyFavoriteBooks /> : ''}
+              {isAuthenticated ? <BookForm /> : ''}
               </Route>
 
               <Route 
