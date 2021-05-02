@@ -1,6 +1,4 @@
 import React from 'react';
-// import BestBooks from './BestBooks';
-// import axios from 'axios';
 import Footer from './Footer';
 import Header from './Header';
 import IsLoadingAndError from './IsLoadingAndError';
@@ -19,15 +17,14 @@ import { withAuth0 } from '@auth0/auth0-react';
 
 class App extends React.Component {
 
-  constructor(props) {
-    super(props);
-
-    this.state ={
-      userName: '',
-      favoriteBooks: [],
-      userEmail: '',
-    }
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state ={
+  //     name: '',
+  //     books: [],
+  //     email: '',
+  //   }
+  // }
 
   render() {
     console.log('app', this.props);

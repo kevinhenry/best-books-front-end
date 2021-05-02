@@ -5,7 +5,6 @@ import './App.css';
 class BookForm extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       description: '',
       email: '',

@@ -4,8 +4,6 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import './MyFavoriteBooks.css';
 import BestBooks from './BestBooks';
 import {withAuth0} from '@auth0/auth0-react';
-// import Container from 'react-bootstrap/Container';
-// import Carousel from 'react-bootstrap/Carousel';
 
 class MyFavoriteBooks extends React.Component {
 
