@@ -3,6 +3,7 @@ import './App.css';
 import axios from 'axios';
 import { withAuth0 } from '@auth0/auth0-react';
 import { Carousel } from 'react-bootstrap';
+// import Modal from 'react-bootstrap/Modal'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 
@@ -29,7 +30,7 @@ class BestBooks extends React.Component {
     // const data = this.state.bookList.length > 0 && this.state.bookList[0].bookData;
     return(
       <Container>
-        <Carousel>
+          <Carousel>
           {this.state.books.map(book =>
             <Carousel.Item key={book._id}>
               <img
@@ -37,12 +38,12 @@ class BestBooks extends React.Component {
                 src={'https://via.placeholder.com/300x300'}
                 alt={book.name}
               />
-              <Carousel.Caption>
-                <h3>{book.name}</h3>
-                <p>{book.description}</p>
-                <p>{book.status}</p>
-              </Carousel.Caption>
-            </Carousel.Item>
+                  <Carousel.Caption>
+                  <h3>{book.name}</h3>
+                  <p>{book.description}</p>
+                  <p>{book.status}</p>
+                </Carousel.Caption>
+              </Carousel.Item>
           )}
         </Carousel>
       </Container>
