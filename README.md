@@ -94,9 +94,9 @@ Actual time needed to complete: _5.5 hours____
 
 --
 
-Name of feature: ________________________________
+Name of feature: __Create______________________________
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: _Overlap____
 
 Start time: _____
 
@@ -106,9 +106,9 @@ Actual time needed to complete: _____
 
 --
 
-Name of feature: ________________________________
+Name of feature: __Delete______________________________
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: _Overlap____
 
 Start time: _____
 
