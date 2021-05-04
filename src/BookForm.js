@@ -1,10 +1,12 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
+import { withAuth0 } from '@auth0/auth0-react';
 
 class BookForm extends React.Component {
   constructor(props) {
     super(props);
+    
     this.state = {
       description: '',
       email: '',
@@ -27,7 +29,7 @@ class BookForm extends React.Component {
   }
 
   fetchUserData = () => {
-    axios.get(`${process.env.REACT_APP_BACKEND_URL}/user/${this.state.email}`)
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}/user/${this.props.auth0.user.email}`)
     .then(serverResponse => {
       console.log(serverResponse.data);
       this.setState({
@@ -38,11 +40,11 @@ class BookForm extends React.Component {
 
   handleCreateBook = (e) => {
     e.preventDefault();
-    console.log('name', this.state.name, 'email', this.state.email, 'description', this.state.description);
+    console.log('name', this.state.name, 'email', this.props.auth0.user.email, 'description', this.state.description);
     // make the request to the server with the info the user typed in
     axios.post(`${process.env.REACT_APP_BACKEND_URL}/books`, {
       description: this.state.description,
-      email: this.state.email,
+      email: this.props.auth0.user.email,
       name: this.state.name
     }).then( response => {
       console.log(response.data);
@@ -53,7 +55,7 @@ class BookForm extends React.Component {
   }
 
   handleDelete = (id) => {
-    axios.delete(`${process.env.REACT_APP_BACKEND_URL}/books/${id}?user=${this.state.email}`).then(responseData => {
+    axios.delete(`${process.env.REACT_APP_BACKEND_URL}/books/${id}?user=${this.props.auth0.user.email}`).then(responseData => {
       this.setState({ 
         books: responseData.data
       })
@@ -87,4 +89,4 @@ class BookForm extends React.Component {
     </>
   }
 }
-export default BookForm;
+export default withAuth0 (BookForm);
