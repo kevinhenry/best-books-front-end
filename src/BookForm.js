@@ -67,11 +67,11 @@ class BookForm extends React.Component {
   }
   render() {
     return <>
-      <h1>New Books!</h1>
-      <form onSubmit={this.handleFormSubmit}>
+      <h1>Enter New Books!</h1>
+      {/* <form onSubmit={this.handleFormSubmit}>
         <input type="text" onInput={this.handleEmailInput} />
         <input type="submit" />
-      </form>
+      </form> */}
       {this.state.books.length > 0 && <ul>
         {this.state.books.map(book => 
           <li key={book._id}>{book.name}: {book.description} <button onClick={e => this.handleDelete(book._id)} >Delete</button></li>
