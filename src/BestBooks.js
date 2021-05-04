@@ -38,12 +38,14 @@ class BestBooks extends React.Component {
                 src={'https://via.placeholder.com/300x300'}
                 alt={book.name}
               />
-                  <Carousel.Caption>
+              <Carousel.Caption>
+                <div>
                   <h3>{book.name}</h3>
                   <p>{book.description}</p>
                   <p>{book.status}</p>
-                </Carousel.Caption>
-              </Carousel.Item>
+                </div>
+              </Carousel.Caption>
+            </Carousel.Item>
           )}
         </Carousel>
       </Container>
