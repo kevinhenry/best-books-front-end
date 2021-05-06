@@ -10,8 +10,14 @@ import { Container } from 'react-bootstrap';
 class BestBooks extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
+      bookDescription: '',
+      email: '',
       books: [],
+      bookName: '',
+      updatingBook: '',
+      isUpdating: false
     }
   }
 
@@ -37,13 +43,13 @@ class BestBooks extends React.Component {
                 className="d-block w-100"
                 src={'https://via.placeholder.com/300x300'}
                 // src={'img/Dracula-2.jpeg/300x300'}
-                alt={book.name}
+                alt={book.bookName}
               />
               <Carousel.Caption>
                 <div>
-                  <h3>{book.name}</h3>
-                  <p>{book.description}</p>
-                  <p>{book.status}</p>
+                  <h3>{book.bookName}</h3>
+                  <p>{book.bookDescription}</p>
+                  <p>{book.bookStatus}</p>
                 </div>
               </Carousel.Caption>
             </Carousel.Item>
