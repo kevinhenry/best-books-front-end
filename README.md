@@ -118,6 +118,18 @@ Actual time needed to complete: _____
 
 --
 
+Name of feature: _Change and Update_______________________________
+
+Estimate of time needed to complete: _2____
+
+Start time: _8____
+
+Finish time: _9____
+
+Actual time needed to complete: _1 hr____
+
+--
+
 Name of feature: ________________________________
 
 Estimate of time needed to complete: _____
@@ -128,6 +140,7 @@ Finish time: _____
 
 Actual time needed to complete: _____
 
+--
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
