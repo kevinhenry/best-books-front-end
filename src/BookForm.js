@@ -7,11 +7,18 @@ class BookForm extends React.Component {
   constructor(props) {
     super(props);
     
+    // this.state = {
+    //   description: '',
+    //   email: '',
+    //   books: [],
+    //   name: ''
     this.state = {
-      description: '',
+      bookDescription: '',
       email: '',
       books: [],
-      name: ''
+      bookName: '',
+      updatingBook: '',
+      isUpdating: false
     }
   }
   handleEmailInput = (e) => {
@@ -74,12 +81,17 @@ class BookForm extends React.Component {
       </form> */}
       {this.state.books.length > 0 && <ul>
         {this.state.books.map(book => 
-          <li key={book._id}>{book.name}: {book.description} <button onClick={e => this.handleDelete(book._id)} >Delete</button></li>
+          <li key={book._id}>
+            {book.bookName}: {book.bookDescription}
+            <button onClick={e => this.handleUpdate(book)}>Update</button>
+            <button onClick={e => this.handleDelete(book._id)} >Delete</button>
+            </li>
         )}
         </ul>}
       <form onSubmit={this.handleCreateBook}>
         <label htmlFor="name">Book Name</label>
-        <input id="name" type="text" onInput={this.handleNameInput}></input>
+        <input id="name" type="text" onInput={this.handleNameInput} value={this.state.name}></input>
+        {/* <input id="name" type="text" onInput={this.handleNameInput}></input> */}
         <br />
         <label htmlFor="description">Book Description</label>
         <input id="description" onInput={this.handleDescriptionInput}></input>
